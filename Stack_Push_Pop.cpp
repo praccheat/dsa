@@ -22,7 +22,7 @@ void stack::disp(){
      cout<<"\n"<<stck[i];
    }
 }
-int main(){    
+int main(){
     stack s;
     int n;
     do{
@@ -44,6 +44,5 @@ int main(){
                 cout<<"invalid";
         }
     }while(n==1||n==2||n==3);
-
     return 0;
 }
