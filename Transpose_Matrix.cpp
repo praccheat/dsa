@@ -3,7 +3,6 @@
 #include<stdio.h>
 using namespace std;
 int main(){
-	
 	int a[4][4],b[4][4],j,k;
 	cout<<"Enter Array Elements:";
 	for(j=0;j<4;j++){
@@ -18,6 +17,6 @@ int main(){
 			cout<<b[j][k]<<"\t";
 		}
 		cout<<"\n";
-	}	
+	}
     return 0;
 }
