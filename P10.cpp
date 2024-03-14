@@ -1,31 +1,35 @@
-#include<IOSTREAM>
+#include <iostream>
 using namespace std;
 
-int fibonacci(int n) {
-    if (n == 1 || n==2) {
+int factorial(int n) {
+    if (n == 0 || n == 1) {
         return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
     } else {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 
-int main(){
-    
-    // A part
-    int a , fact = 1;
-    cout<<"enter the number:";
-    cin>>a;
-    for(int i = 2; i <= a;i++){
-	fact *= i;
-    }
-    cout<<"factorial of "<<a<<"  is "<<fact<<endl;
-    
-   //B part
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
+int main() {
+    int num;
+    cout << "Enter a number to find its factorial: ";
+    cin >> num;
+    cout << "Factorial of " << num << " is " << factorial(num) << endl;
 
-    cout << "Fibonacci of " << n << " is: " << fibonacci(n) << endl;
+    cout << "Enter the number of terms for Fibonacci series: ";
+    cin >> num;
+    cout << "Fibonacci series up to " << num << " terms: ";
+    for (int i = 0; i < num; ++i) {
+        cout << fibonacci(i) << " ";
+    }
+    cout << endl;
 
     return 0;
 }
