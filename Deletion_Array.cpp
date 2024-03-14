@@ -2,7 +2,6 @@
 #include<conio.h>
 using namespace std;
 int main(){
-    
     int a[20],n,i,del,count=0;
     cout<<"Enter elements to be entered:";
     cin>>n;
